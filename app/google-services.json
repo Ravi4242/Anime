@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "281341729136",
+    "firebase_url": "https://anime-2ed47.firebaseio.com",
+    "project_id": "anime-2ed47",
+    "storage_bucket": "anime-2ed47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281341729136:android:684239330e7f48a3",
+        "android_client_info": {
+          "package_name": "com.example.anime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281341729136-s6vsis3thph0su3rhajbj86e428ju169.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anime",
+            "certificate_hash": "0b6b4349eebaa1663eefa18f27bdd36c70fdb5f2"
+          }
+        },
+        {
+          "client_id": "281341729136-43fv4aptf68e2mf1ahlm6aen4peppk1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxJMGGLrmajh8Oh3qQGgaQo7wB-zqgflQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281341729136-43fv4aptf68e2mf1ahlm6aen4peppk1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
