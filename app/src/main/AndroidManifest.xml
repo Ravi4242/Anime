@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".VideoPlayer"
+        <activity android:name=".mvp.exoplayer.VideoPlayer"
             android:screenOrientation="portrait"/>
         <activity android:name=".mvp.videolist.VideosDashboard" />
         <activity android:name=".mvp.videolist.MainActivity">

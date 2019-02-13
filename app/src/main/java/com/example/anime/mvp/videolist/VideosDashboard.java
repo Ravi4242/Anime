@@ -5,12 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.anime.adapter.RecyclerAdapter;
 import com.example.anime.R;
 import com.example.anime.model.Video;
+import com.example.anime.mvp.exoplayer.VideoPlayer;
 import com.example.anime.videoclient.VideoClient;
 import java.util.List;
 

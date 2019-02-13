@@ -1,5 +1,7 @@
 package com.example.anime.mvp.videolist;
 
+import android.database.sqlite.SQLiteDatabase;
+
 import com.example.anime.model.Video;
 import com.example.anime.videoclient.VideoClient;
 
@@ -37,4 +39,5 @@ public class VideosPresenter implements VideoContractor.Presenter {
     public void dropView() {
       view = null;
     }
+
 }

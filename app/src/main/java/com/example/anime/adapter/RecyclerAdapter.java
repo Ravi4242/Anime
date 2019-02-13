@@ -3,7 +3,6 @@ package com.example.anime.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +10,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.anime.VideoPlayer;
+import com.example.anime.mvp.exoplayer.VideoPlayer;
 import com.example.anime.model.Video;
 import com.example.anime.R;
+import com.example.anime.mvp.videolist.VideosPresenter;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideosViewHolder> {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideosViewHolder>{
 
     private Context context;
     private List<Video> videoList = new ArrayList<>();
@@ -55,12 +55,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Videos
             @Override
             public void onClick(View v) {
                 Intent videoPlayer = new Intent(context, VideoPlayer.class);
-                videoPlayer.putExtra("position", position);
                 videoPlayer.putExtra("VideoURL", videoList.get(position).getUrl());
-                videoPlayer.putExtra("title", videoList.get(position).getTitle());
+                videoPlayer.putExtra("title",videoList.get(position).getTitle());
                 videoPlayer.putExtra("description", videoList.get(position).getDescription());
                 context.startActivity(videoPlayer);
-                if(context instanceof VideoPlayer){
+                if((context) instanceof VideoPlayer){
                     ((Activity)context).finish();
                 };
             }
