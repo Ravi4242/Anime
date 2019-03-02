@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Anime</string>
     <string name="bg">bg</string>
-    <string name="thumbail">thumbail</string>
+    <string name="thumbnail">thumbnail</string>
+    <string name="related">Related</string>
+    <string name="logout">Logout</string>
 </resources>

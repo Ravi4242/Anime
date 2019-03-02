@@ -1,11 +1,8 @@
 package com.example.anime.mvp.videolist;
 
-import android.database.sqlite.SQLiteDatabase;
-
 import com.example.anime.model.Video;
 import com.example.anime.videoclient.VideoClient;
-
-import java.util.List;
+import java.util.ArrayList;
 
 public class VideosPresenter implements VideoContractor.Presenter {
 
@@ -19,8 +16,8 @@ public class VideosPresenter implements VideoContractor.Presenter {
 
     private final VideoContractor.OnResponseCallback callback = new VideoContractor.OnResponseCallback() {
         @Override
-        public void onSuccess(List<Video> videos) {
-             view.showVideoList(videos);
+        public void onSuccess(ArrayList<Video> videos, int position) {
+             view.showVideoList(videos, position);
              view.hideProgress();
         }
 
@@ -31,9 +28,9 @@ public class VideosPresenter implements VideoContractor.Presenter {
     };
 
     @Override
-    public void loadVideoList() {
+    public void loadVideoList(int position) {
         view.showProgress();
-        videoClient.getVideosList(callback);
+        videoClient.getVideosList(callback,position);
     }
     @Override
     public void dropView() {

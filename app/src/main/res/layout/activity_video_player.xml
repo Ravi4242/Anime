@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".mvp.exoplayer.VideoPlayer">
-<com.google.android.exoplayer2.ui.SimpleExoPlayerView
-    android:layout_width="match_parent"
-    android:layout_height="250dp"
-    android:background="#000000"
-    android:id="@+id/simple_video_player"/>
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#000000"
+        app:resize_mode="fit"
+        android:id="@+id/simple_video_player"/>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,25 +1,25 @@
 package com.example.anime.mvp.videolist;
 
-import android.database.sqlite.SQLiteDatabase;
 
 import com.example.anime.model.Video;
 
-import java.util.List;
+import java.util.ArrayList;
+
 
 public interface VideoContractor {
     interface View {
-        void showVideoList(List<Video> videos);
+        void showVideoList(ArrayList<Video> videos, int position);
         void showProgress();
         void hideProgress();
     }
 
     interface Presenter {
-        void loadVideoList();
+        void loadVideoList(int position);
         void dropView();
 
     }
     interface OnResponseCallback {
-        void onSuccess(List<Video> videos);
+        void onSuccess(ArrayList<Video> videos, int position);
         void onFailure(String msg);
     }
 }
